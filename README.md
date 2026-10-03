@@ -21,6 +21,22 @@ gives a risk score with clear reasons, instead of just a gut feeling.
 
 ![Feedback log CSV opened in Excel, showing timestamp, score, risk level, flag count and source columns](screenshots/feedback_log_excel.png)
 
+**The AI explanation layer, plain-English summary of why an email is risky:**
+
+![AI explanation showing a plain-English summary of why the email was flagged](screenshots/ai_explanation.png)
+
+**Domain/IP origin lookup, showing where the sender's IP is actually registered:**
+
+![Origin lookup showing an IP traced to Sydney, Australia, Amazon Technologies Inc.](screenshots/ip_lookup.png)
+
+**Multi-language detection, a Spanish phishing email auto-translated and still caught:**
+
+![Language note showing a Spanish email was auto-translated to English and scored 100/100 high risk](screenshots/language_note.png)
+
+**QR code link checking, the link hidden inside a QR image is extracted and checked:**
+
+![QR code found message showing the scam link extracted from inside the uploaded QR image](screenshots/qr_detection.png)
+
 ## 🧠 Why I built this
 
 I received a real phishing email at work and manually investigated the
