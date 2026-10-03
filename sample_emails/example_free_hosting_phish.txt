@@ -1,0 +1,11 @@
+From: IT Support <support@mail-notify-service.com>
+To: staff@example.com
+Subject: Verify your account to continue
+
+Hello,
+
+We detected unusual activity on your account. Please verify your account
+immediately by signing in here: https://sites.google.com/view/account-verify-secure
+
+Regards,
+IT Support

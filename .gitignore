@@ -1,0 +1,4 @@
+__pycache__/
+*.pyc
+feedback_log.csv
+static/dashboard_chart.png

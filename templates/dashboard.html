@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Phishing Email Analyser</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <main class="page">
+        <header class="page-header">
+            <h1>Your dashboard</h1>
+            <p class="subtitle">A summary of every email you've checked with this tool.</p>
+            <a class="nav-link" href="{{ url_for('index') }}">&larr; Back to analyser</a>
+        </header>
+
+        <section class="stat-row">
+            <div class="stat-card">
+                <div class="stat-number">{{ stats.total_checks }}</div>
+                <div class="stat-label">Emails checked</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">{{ stats.average_score }}</div>
+                <div class="stat-label">Average score</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">{{ stats.risk_counts['HIGH RISK'] }}</div>
+                <div class="stat-label">High risk found</div>
+            </div>
+        </section>
+
+        {% if has_chart %}
+        <div class="result-block">
+            <h2>Checks by risk level</h2>
+            <img class="chart-image" src="{{ url_for('static', filename='dashboard_chart.png') }}"
+                 alt="Bar chart showing how many emails were checked at each risk level">
+        </div>
+        {% else %}
+        <div class="result-block">
+            <p>No emails checked yet. Analyse an email first, then come back here to see your stats.</p>
+        </div>
+        {% endif %}
+
+        {% if stats.recent_rows %}
+        <div class="result-block">
+            <h2>Recent checks</h2>
+            <table class="log-table">
+                <thead>
+                    <tr>
+                        <th>When</th>
+                        <th>Score</th>
+                        <th>Risk level</th>
+                        <th>Flags found</th>
+                        <th>Source</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for row in stats.recent_rows %}
+                    <tr>
+                        <td>{{ row.timestamp }}</td>
+                        <td>{{ row.score }}</td>
+                        <td>{{ row.risk_level }}</td>
+                        <td>{{ row.flag_count }}</td>
+                        <td>{{ row.source }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        {% endif %}
+
+        <footer class="page-footer">
+            <p>This history is stored only on your own computer (feedback_log.csv), it never saves
+               the actual email content, only the score and risk level of each check.</p>
+        </footer>
+    </main>
+</body>
+</html>

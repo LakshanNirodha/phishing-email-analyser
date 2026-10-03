@@ -1,0 +1,14 @@
+From: IT Support <officeteamsupport532@gmail.com>
+To: staff@example.com
+Subject: Urgent: Confirm your account details today
+
+Dear Customer,
+
+Your account will be suspended within 24 hours unless you verify your account immediately.
+
+Please click here now to confirm your details: http://bit.ly/3xampleScamLink
+
+Failure to act fast may result in permanent suspension.
+
+Regards,
+IT Support Team

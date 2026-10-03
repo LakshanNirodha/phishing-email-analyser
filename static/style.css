@@ -1,0 +1,280 @@
+:root {
+    --bg: #f4f5f7;
+    --card-bg: #ffffff;
+    --text: #1f2430;
+    --muted: #5b6270;
+    --border: #e1e4e9;
+    --accent: #2f6fed;
+
+    --high-bg: #fdecec;
+    --high-border: #d93025;
+    --high-text: #8c1c17;
+
+    --medium-bg: #fff4e5;
+    --medium-border: #e08a00;
+    --medium-text: #8a5300;
+
+    --low-bg: #fffbe0;
+    --low-border: #c9a400;
+    --low-text: #6b5900;
+
+    --none-bg: #e9f8ee;
+    --none-border: #1e8e3e;
+    --none-text: #15602c;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+}
+
+.page {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 32px 20px 60px;
+}
+
+.page-header h1 {
+    font-size: 1.8rem;
+    margin-bottom: 4px;
+}
+
+.subtitle {
+    color: var(--muted);
+    margin-top: 0;
+}
+
+.email-form {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.email-form label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.email-form textarea {
+    width: 100%;
+    font-family: "Courier New", monospace;
+    font-size: 0.9rem;
+    padding: 12px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    resize: vertical;
+    background: #fafbfc;
+    color: var(--text);
+}
+
+.qr-label {
+    display: block;
+    font-weight: 600;
+    margin-top: 16px;
+    margin-bottom: 8px;
+}
+
+.email-form input[type="file"] {
+    display: block;
+    width: 100%;
+    font-size: 0.9rem;
+    color: var(--muted);
+}
+
+.email-form button {
+    margin-top: 14px;
+    background: var(--accent);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.email-form button:hover {
+    filter: brightness(0.92);
+}
+
+.result {
+    margin-top: 28px;
+}
+
+.score-card {
+    border-radius: 10px;
+    border: 2px solid var(--border);
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.score-number {
+    font-size: 2.6rem;
+    font-weight: 700;
+}
+
+.score-max {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: var(--muted);
+}
+
+.score-label {
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin-top: 4px;
+}
+
+/* Risk colours are always paired with the text label above, never colour alone,
+   so the result is still clear for colourblind users or screen readers. */
+.risk-high-risk {
+    background: var(--high-bg);
+    border-color: var(--high-border);
+    color: var(--high-text);
+}
+
+.risk-medium-risk {
+    background: var(--medium-bg);
+    border-color: var(--medium-border);
+    color: var(--medium-text);
+}
+
+.risk-low-risk {
+    background: var(--low-bg);
+    border-color: var(--low-border);
+    color: var(--low-text);
+}
+
+.risk-no-obvious-signs {
+    background: var(--none-bg);
+    border-color: var(--none-border);
+    color: var(--none-text);
+}
+
+.result-block {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px 20px;
+    margin-bottom: 16px;
+}
+
+.result-block h2 {
+    font-size: 1.05rem;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.result-block.highlight {
+    border-left: 4px solid var(--accent);
+}
+
+.result-block ol {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.result-block li {
+    margin-bottom: 6px;
+}
+
+.ioc-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.ioc-list li {
+    margin-bottom: 6px;
+}
+
+.ioc-list code {
+    background: #f0f1f4;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.page-footer {
+    margin-top: 32px;
+    color: var(--muted);
+    font-size: 0.85rem;
+    text-align: center;
+}
+
+.nav-link {
+    display: inline-block;
+    margin-top: 8px;
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+}
+
+.stat-row {
+    display: flex;
+    gap: 16px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+
+.stat-card {
+    flex: 1;
+    min-width: 140px;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px;
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--accent);
+}
+
+.stat-label {
+    color: var(--muted);
+    font-size: 0.9rem;
+    margin-top: 4px;
+}
+
+.chart-image {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+.log-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+.log-table th,
+.log-table td {
+    text-align: left;
+    padding: 8px 10px;
+    border-bottom: 1px solid var(--border);
+}
+
+.log-table th {
+    color: var(--muted);
+    font-weight: 600;
+}

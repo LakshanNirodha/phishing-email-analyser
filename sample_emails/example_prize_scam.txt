@@ -1,0 +1,18 @@
+From: National Quiz Rewards <winners@quiz-rewardsclub.com>
+To: staff@example.com
+Subject: Congratulations! You've won free tickets
+
+Hello,
+
+Congratulations, you have won free tickets in our recent quiz competition!
+
+To process and deliver your prize, please reply with the following details:
+- Your full name and home address
+- Your partner's name and mobile number
+- Your children's names and date of birth
+- A next of kin contact
+
+Please respond within 24 hours or your prize will be forfeited.
+
+Regards,
+National Quiz Rewards Team

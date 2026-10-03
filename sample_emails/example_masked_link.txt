@@ -1,0 +1,13 @@
+From: Netflix <billing@netflix.com>
+To: staff@example.com
+Subject: Payment failed - update your details
+
+<html>
+<body>
+<p>Hi,</p>
+<p>Your last payment failed. Please update your payment details by visiting
+<a href="http://netflix-billing-update.ru/login">www.netflix.com</a> to
+avoid your subscription being cancelled.</p>
+<p>Thanks,<br>Netflix</p>
+</body>
+</html>

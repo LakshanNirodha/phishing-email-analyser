@@ -1,0 +1,19 @@
+Return-Path: <support@teckbe.com>
+Received-SPF: pass (domain of teckbe.com designates 103.234.236.83 as permitted sender)
+Authentication-Results: atlas102.free.mail.gq1.yahoo.com;
+ dkim=pass header.i=@teckbe.com header.s=dk2048;
+ spf=pass smtp.mailfrom=teckbe.com;
+ dmarc=pass(p=NONE) header.from=teckbe.com;
+From: Thank you! Home Depot <support@teckbe.com>
+To: alexa@yahoo.com
+Reply-To: support@teckbe.com
+Subject: Order Placed : Your Order ID OD2321657089291 Placed Successfully
+Date: Sun, 11 Jul 2021 11:43:46 GMT
+
+Thank you for your order! Your Order ID OD2321657089291 has been placed
+successfully.
+
+- CLICK HERE to view your order details.
+
+If you wish to unsubscribe click here.
+Or you may write to: Space Tree Technologies at P.O. Box 4213, Nevada, US

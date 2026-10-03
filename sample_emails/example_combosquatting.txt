@@ -1,0 +1,12 @@
+From: Duolingo Account Team <no-reply@duolingo-dash.com>
+To: staff@example.com
+Subject: Your streak is at risk - action needed
+
+Hi,
+
+We noticed unusual activity on your account. To keep your streak and avoid
+losing your progress, please verify your account immediately by confirming
+your password and billing information.
+
+Thanks,
+Duolingo Account Team

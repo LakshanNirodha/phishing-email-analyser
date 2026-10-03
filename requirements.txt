@@ -1,0 +1,8 @@
+google-genai
+flask
+matplotlib
+requests
+py3langid
+deep-translator
+opencv-python-headless
+numpy

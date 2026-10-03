@@ -1,0 +1,11 @@
+PayPal Security Team<alerts-support29@mail-secure247.ru>
+To: staff@example.com
+Subject: Unusual sign-in activity - action needed
+
+Hello,
+
+We detected unusual sign-in activity on your account. Your account will be
+suspended unless you confirm your password within 24 hours.
+
+Regards,
+PayPal Security Team

@@ -1,0 +1,14 @@
+From: IT Support <officeteamsupport532@gmail.com>
+To: staff@example.com
+Subject: Urgent account notice
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+
+Dear Customer,
+
+Your account will be suspended within 24 hours unless you verify your accou=
+nt immediately.
+
+Please click here now to confirm your details: http://bit.ly/3xampleScamLink
+
+Regards, IT Support Team

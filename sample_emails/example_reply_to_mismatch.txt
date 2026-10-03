@@ -1,0 +1,12 @@
+From: Commonwealth Bank <alerts@commbank.com.au>
+Reply-To: support@secure-cb-alerts.com
+To: staff@example.com
+Subject: Your account access has been limited
+
+Dear Customer,
+
+Your account access has been limited due to unusual activity. Please verify
+your account immediately and confirm your password to restore access.
+
+Regards,
+Commonwealth Bank

@@ -1,0 +1,12 @@
+From: Microsoft Account Team <security@micr0soft.com>
+To: staff@example.com
+Subject: Unusual sign-in detected
+
+Hello,
+
+We detected a new sign-in to your account. Please confirm your password and enter your PIN to secure your account.
+
+See attached report: signin-report.exe
+
+Thanks,
+Microsoft Account Team

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phishing Email Analyser</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <main class="page">
+        <header class="page-header">
+            <h1>Phishing Email Analyser</h1>
+            <p class="subtitle">Paste an email below to check it for common phishing signs.</p>
+            <a class="nav-link" href="{{ url_for('dashboard') }}">View my dashboard &rarr;</a>
+        </header>
+
+        <form method="POST" class="email-form" enctype="multipart/form-data">
+            <label for="email_text">Email text (headers + body):</label>
+            <textarea id="email_text" name="email_text" rows="12"
+                placeholder="Paste the full email here, including the From, Subject, and other header lines if you have them...">{{ email_text }}</textarea>
+
+            <label for="qr_image" class="qr-label">Got a QR code in the email? Upload a screenshot of it (optional):</label>
+            <input type="file" id="qr_image" name="qr_image" accept="image/*">
+
+            <button type="submit">Analyse email</button>
+        </form>
+
+        {% if result %}
+        <section class="result" aria-label="Analysis result">
+
+            <div class="score-card risk-{{ result.risk_level | lower | replace(' ', '-') }}">
+                <div class="score-number">{{ result.score }}<span class="score-max">/100</span></div>
+                <div class="score-label">{{ result.risk_level }}</div>
+            </div>
+
+            {% if result.language_notice %}
+            <div class="result-block">
+                <h2>Language note</h2>
+                <p>{{ result.language_notice }}</p>
+            </div>
+            {% endif %}
+
+            {% if result.qr_links %}
+            <div class="result-block">
+                <h2>QR code found</h2>
+                <p>This link was found inside the QR code image and was checked the same
+                   way as any other link in the email:</p>
+                <ul class="ioc-list">
+                    {% for link in result.qr_links %}
+                    <li><code>{{ link }}</code></li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endif %}
+
+            <div class="result-block">
+                <h2>Reasons this email was flagged</h2>
+                {% if result.flags %}
+                <ol>
+                    {% for flag in result.flags %}
+                    <li>{{ flag }}</li>
+                    {% endfor %}
+                </ol>
+                {% else %}
+                <p>No suspicious patterns were found by the rule checks. This does not
+                   guarantee the email is safe, it only means none of the current rules
+                   were triggered.</p>
+                {% endif %}
+            </div>
+
+            <div class="result-block">
+                <h2>AI explanation</h2>
+                <p>{{ result.explanation }}</p>
+            </div>
+
+            <div class="result-block highlight">
+                <h2>What should I do?</h2>
+                <p>{{ result.recommended_action }}</p>
+            </div>
+
+            {% if result.indicators %}
+            <div class="result-block">
+                <h2>Indicators found (defanged, safe to paste into a report)</h2>
+                <ul class="ioc-list">
+                    {% for ioc in result.indicators %}
+                    <li><code>{{ ioc }}</code></li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endif %}
+
+            {% if result.origin_lookups %}
+            <div class="result-block">
+                <h2>Origin lookup (where the sender's IP is registered)</h2>
+                <ul class="ioc-list">
+                    {% for origin in result.origin_lookups %}
+                    <li><code>{{ origin.ip }}</code> &rarr; {{ origin.city }}, {{ origin.country }}
+                        (ISP/organisation: {{ origin.isp }})</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endif %}
+
+        </section>
+        {% endif %}
+
+        <footer class="page-footer">
+            <p>This tool gives advice only. It never deletes, blocks, or reports anything
+               automatically, you always make the final decision.</p>
+        </footer>
+    </main>
+</body>
+</html>

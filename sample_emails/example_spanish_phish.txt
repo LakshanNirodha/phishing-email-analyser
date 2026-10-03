@@ -1,0 +1,12 @@
+From: Soporte Bancario <soporte532@gmail.com>
+To: cliente@example.com
+Subject: Urgente: Verifique su cuenta hoy
+
+Estimado cliente,
+
+Su cuenta sera suspendida en 24 horas a menos que verifique de inmediato.
+
+Por favor haga clic aqui ahora para confirmar sus datos:
+http://bit.ly/3xampleScamLink
+
+Si no actua rapido, su cuenta sera suspendida de forma permanente.

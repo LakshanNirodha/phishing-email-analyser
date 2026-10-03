@@ -1,0 +1,14 @@
+From: Accounts <billing@example-supplies.com>
+To: accounts-payable@example.com
+Subject: Updated remittance information - please update on file
+
+Hello,
+
+Please note we have updated bank details for all future payments. Kindly
+update our payment details on file and use the new banking information for
+your next remittance.
+
+Please action this urgently as the previous account is being closed.
+
+Regards,
+Accounts Team

@@ -1,0 +1,7 @@
+From: Office Team support <officeteamsupport532@gmail.com>
+To: staff@example.com
+Subject: Scan this QR to view your document
+
+Hi,
+
+Please scan the attached QR code to securely view your shared document.

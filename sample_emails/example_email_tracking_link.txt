@@ -1,0 +1,12 @@
+From: Popular Shopping Site <no-reply@popularshoppingsite-rewards.com>
+To: staff@example.com
+Subject: Your exclusive reward is waiting
+
+Hi,
+
+Claim your exclusive reward now by visiting the link below:
+
+http://popularshoppingsite.com.rewards-claim.ru/offer?email=staff@example.com
+
+Thanks,
+Rewards Team

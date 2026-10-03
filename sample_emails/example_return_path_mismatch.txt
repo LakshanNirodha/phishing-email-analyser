@@ -1,0 +1,12 @@
+From: IT Support <itsupport@yourcompany-helpdesk.com>
+Return-Path: <bounce@malicious-sender123.ru>
+To: staff@example.com
+Subject: Your mailbox is 99% full - click to expand
+
+Hello,
+
+Your mailbox storage is almost full. Click here to expand your storage
+immediately: http://yourcompany-helpdesk.com.storage-expand.ru/login
+
+Thanks,
+IT Support
